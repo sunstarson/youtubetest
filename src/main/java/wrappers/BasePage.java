@@ -37,4 +37,12 @@ public class BasePage {
         List<WebElement> items = driver.findElements(locator);
         return items.get(index);
     }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
+    public String getTitle() {
+        return driver.getTitle();
+    }
 }

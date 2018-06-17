@@ -35,12 +35,4 @@ public class BaseTest {
         driver.get(url);
     }
 
-    public String getCurrentUrl() {
-        return driver.getCurrentUrl();
-    }
-
-    public String getTitle() {
-        return driver.getTitle();
-    }
-
 }
