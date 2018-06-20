@@ -13,6 +13,12 @@ public class YouTubePage extends BasePage{
         type(searchInput, text);
     }
 
+    public void search(String text) {
+        type(text);
+        submitSearch();
+        waitUntilUrlContains(text);
+    }
+
     public void submitSearch() {
         click(submitButton);
     }
@@ -21,4 +27,5 @@ public class YouTubePage extends BasePage{
         WebElement option = getElementFromListByIndex(searchResults, index);
         click(option);
     }
+
 }

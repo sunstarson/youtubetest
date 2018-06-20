@@ -16,7 +16,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         //driver.manage().window().setSize(new Dimension(2560, 1600));
-        driver.manage().window().fullscreen();
+        driver.manage().window().fullscreen(); // - развернул на весь экран
     }
 
     @AfterClass

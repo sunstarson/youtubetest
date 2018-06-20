@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ProfilePage;
 import pages.VideoPage;
 import pages.YouTubePage;
 import wrappers.BaseTest;
@@ -23,12 +24,13 @@ public class YouTubeTests extends BaseTest {
     }
 
     @Test
-    public void mainTest() throws InterruptedException {
+    public void mainTest() {
         YouTubePage youTube = new YouTubePage();
-        youTube.type("234");
-        youTube.submitSearch();
+        youTube.search("234");
         youTube.selectResultOptionByIndex(3);
         VideoPage videoPage = new VideoPage();
         videoPage.openProfile();
+        ProfilePage profilePage = new ProfilePage();
+        profilePage.subscribeToUser();
     }
 }
